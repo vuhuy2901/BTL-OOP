@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lowtech Store – Shop bán đồ thể thao số 1 Itis</title>
+   
+    <link href="/css/home/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="topbar">
+      Miễn phí vận chuyển đơn từ 599k • Đổi size trong 7 ngày • Hotline: 0 123
+      456 789
+    </div>
+    <header>
+      <div class="header-inner">
+        <a class="logo" href="#" aria-label="Trang chủ"
+          ><span class="logo-dot"></span><span>Lowtech Store</span></a
+        >
+        <div class="search" role="search">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input
+            id="searchInput"
+            placeholder="Tìm giày, áo đấu, phụ kiện… (ví dụ: futsal, mercurial)"
+          />
+          <button class="btn-primary" id="searchBtn">Tìm</button>
+        </div>
+        <div class="header-actions">
+          <div class="hotline">📞 0 123 456 789</div>
+          <button class="icon-btn" id="openCart" aria-label="Mở giỏ hàng">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path
+                d="M1 1h4l2.68 12.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+              ></path>
+            </svg>
+            <span id="cartCount">0</span>
+          </button>
+          <div id="loginBtn" class="login-icon">
+            <img
+              src="https://th.bing.com/th/id/R.f58bd7f73934e1145c97570943087ec6?rik=41HmRGohn%2fnBJg&riu=http%3a%2f%2fwww.acsoft.vn%3a8081%2fresources%2fimages%2favatar.jpg&ehk=4oftGWjeo8XsGu%2fcHG2dUJubsKryVLuNa58H9D3TNKA%3d&risl=&pid=ImgRaw&r=0"
+              alt="user"
+            />
+            <span class="notify-dot"></span>
+          </div>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Danh mục">
+        <div class="nav-inner">
+          <a href="#" data-filter="">Tất cả</a>
+          <a href="#" data-filter="giay">THƯƠNG HIỆU</a>
+          <a href="#" data-filter="female">MÔN THỂ THAO</a>
+          <a href="#" data-filter="ao">NAM</a>
+          <a href="#" data-filter="bong">NỮ</a>
+          <a href="#" data-filter="phukien">Phụ kiện</a>
+          <a href="#" data-filter="sale">Sale</a>
+          <a href="#" data-filter="moi">Hàng mới</a>
+        </div>
+      </nav>
+    </header>
+  
+    <section class="hero" id="heroSection" aria-label="Khuyến mãi nổi bật">
+      <div class="banner" id="banner">
+        <div class="slides">
+          <div
+            class="slide"
+            style="
+              background: linear-gradient(120deg, #6485d9 0%, #6485d9 100%);
+            "
+          >
+            <div>
+              <h2>SIÊU SALE FUTSAL • GIẢM ĐẾN 50%</h2>
+              <p>Chỉ trong tuần này – đặt nhanh kẻo hết size!</p>
+            </div>
+          </div>
+          <div
+            class="slide"
+            style="
+              background: linear-gradient(120deg, #6485d9 0%, #6485d9 100%);
+            "
+          >
+            <div>
+              <h2>ÁO ĐẤU MÙA MỚI 2025</h2>
+              <p>Đầy đủ CLB hot: MU, Real, Barca, City…</p>
+            </div>
+          </div>
+          <div
+            class="slide"
+            style="
+              background: linear-gradient(120deg, #6485d9 0%, #6485d9 100%);
+            "
+          >
+            <div>
+              <h2>PHỤ KIỆN CHÍNH HÃNG</h2>
+              <p>Bảo vệ – Vớ – Túi – Bình nước – Giá tốt mỗi ngày</p>
+            </div>
+          </div>
+        </div>
+        <div class="dots" aria-hidden="true"></div>
+      </div>
+      <div class="promo">
+        <div class="card">
+          <h3>Combo Giày + Vớ</h3>
+          <small>Mua combo tiết kiệm thêm 10%</small>
+        </div>
+        <div class="card">
+          <h3>Voucher thành viên</h3>
+          <small>Đăng ký nhận ngay mã -30K</small>
+        </div>
+      </div>
+    </section>
+    <div class="toolbar" id="toolbar">
+      <div class="filters">
+        <button class="chip active" data-chip="all">Tất cả</button>
+        <button class="chip" data-chip="sale">Đang giảm giá</button>
+        <button class="chip" data-chip="moi">Hàng mới</button>
+        <button class="chip" data-chip="<1000">Dưới 1triệu</button>
+        <button class="chip" data-chip=">=1000">Từ 1triệu</button>
+      </div>
+      <select class="sort" id="sortSelect" aria-label="Sắp xếp">
+        <option value="popular">Phổ biến</option>
+        <option value="price-asc">Giá tăng dần</option>
+        <option value="price-desc">Giá giảm dần</option>
+        <option value="newest">Mới nhất</option>
+      </select>
+    </div>
+    <!-- TRANG CHI TIẾT SẢN PHẨM (hash router) -->
+    <section id="detailView" hidden>
+      <div class="detail">
+        <div class="card" id="detailGallery">
+          <a href="#" class="backlink">⬅ Quay lại</a>
+          <div
+            style="
+              width: 100%;
+              aspect-ratio: 1/1;
+              border-radius: 12px;
+              background: #0b1328;
+              display: grid;
+              place-items: center;
+              border: 1px solid var(--stroke);
+              margin-top: 8px;
+            "
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              style="width: 96px; height: 96px; color: #e2e8f0"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <path
+                d="M2 12h20M12 2v20M4 4l4 4M20 4l-4 4M4 20l4-4M20 20l-4-4"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="card">
+          <div id="detailBrand" class="brand"></div>
+          <div id="detailTitle" class="title"></div>
+          <div class="price" style="margin-left: -2px">
+            <span id="detailPrice" class="new"></span>
+            <span id="detailOld" class="old"></span>
+          </div>
+          <div style="margin-top: 16px">
+            <div style="font-weight: 700; margin-bottom: 8px">Chọn size</div>
+            <div id="sizeGroup" class="size-group"></div>
+            <div
+              id="sizeHint"
+              style="margin-top: 8px; font-size: 13px; color: #6b7280"
+            ></div>
+          </div>
+          <div class="qty-row">
+            <span style="min-width: 72px">Số lượng</span>
+            <button id="minusBtn" aria-label="Giảm">-</button>
+            <span id="qtyDisplay">1</span>
+            <button id="plusBtn" aria-label="Tăng">+</button>
+          </div>
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 10px;
+              margin-top: 16px;
+            "
+          >
+            <button id="addToCartDetail" class="btn-primary" disabled>
+              Thêm vào giỏ
+            </button>
+            <button id="buyNowBtn" class="btn-outline" disabled>
+              Mua ngay
+            </button>
+          </div>
+          <div
+            id="detailMeta"
+            style="margin-top: 12px; font-size: 13px; color: #6b7280"
+          ></div>
+        </div>
+      </div>
+    </section>
+    <!-- Lưới sản phẩm -->
+    <section
+      class="products"
+      id="productGrid"
+      aria-label="Danh sách sản phẩm"
+    ></section>
+    <!-- Drawer giỏ hàng -->
+    <aside
+      class="cart-drawer"
+      id="cartDrawer"
+      aria-label="Giỏ hàng"
+      aria-hidden="true"
+    >
+      <div
+        class="cart-head"
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <strong>Giỏ hàng</strong>
+        <button class="btn-outline" id="closeCart">Đóng</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-foot">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+          "
+        >
+          <span>Tạm tính</span> <strong id="subtotal">0₫</strong>
+        </div>
+        <button class="btn-primary" style="width: 100%" id="checkoutBtn">
+          Thanh toán
+        </button>
+      </div>
+    </aside>
+    <footer>
+      <div class="footer-inner">
+        <div class="ft-col">
+          <h4>LT SPORT STORE</h4>
+          <p>
+            Hệ thống cửa hàng đồ thể thao – chuyên giày, áo đấu & phụ kiện. Cam
+            kết chính hãng, đổi size trong 7 ngày.
+          </p>
+          <div class="newsletter">
+            <input placeholder="Nhập email để nhận ưu đãi" /><button
+              class="btn-primary"
+            >
+              Đăng ký
+            </button>
+          </div>
+        </div>
+        <div class="ft-col">
+          <h4>Liên hệ</h4>
+          <p>
+            Hotline: 0 123 456 789<br />Email: support@LTStore.vn<br />CSKH:
+            8:00 – 22:00
+          </p>
+        </div>
+        <div class="ft-col">
+          <h4>Chính sách</h4>
+          <p>
+            Giao hàng & Đổi trả<br />Bảo hành & Hướng dẫn sử dụng<br />Thanh
+            toán & Bảo mật
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/home/index.js"></script>
+    <script src = "/js/auth/index.js"></script>
+  </body>
+</html>
+

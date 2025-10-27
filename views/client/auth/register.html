@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng ký</title>
+  <link rel="stylesheet" href="/client/css/auth/register.css">
+</head>
+<body>
+    
+<form action="/register" method="POST">
+    <h1>Đăng ký</h1>
+   
+    <input type="text" name="username" placeholder="Tên tài khoản" required /><br>
+    <input type="password" name="password" placeholder="Mật khẩu" required /><br>
+    <input type="text" name="name" placeholder="Họ và tên" required /><br>
+    <input type="email" name="email" placeholder="Email" required /><br>
+    <input type="date" name="birthday" required /><br>
+    <input type="text" name="phone" placeholder="Số điện thoại" required /><br>
+    <input type="text" name="address" placeholder="Địa chỉ" required /><br>
+    
+    <div class="gender-group">
+  <span class="gender-label">Giới tính:</span>
+  <div class="gender-options">
+    <label class="gender-option">
+      <input type="radio" name="gender" value="male" checked required />
+      <span>Nam</span>
+    </label>
+    <label class="gender-option">
+      <input type="radio" name="gender" value="female" required />
+      <span>Nữ</span>
+    </label>
+  </div>
+</div>
+    
+    <button type="submit">Đăng ký</button>
+    <p>Đã có tài khoản? <a href="/login">Đăng nhập</a></p>
+</form>
+
+</body>
+</html>
