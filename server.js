@@ -2,11 +2,24 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const port = 3000;
-
+const session = require('express-session');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+
+
+
+app.use(session({
+  secret: 'vuvanhuysession', 
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    maxAge:  60 * 60 * 1000, // lưu session trong 1 tiếng 
+    httpOnly: true,
+    secure: false 
+  }
+}));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
