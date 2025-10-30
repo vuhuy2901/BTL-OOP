@@ -1,12 +1,12 @@
-// db.js
+
 const mysql = require('mysql2');
 
-// Tạo kết nối
+
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '123456',
-  database: 'testdb',
+  database: 'shop_the_thao',
   port: 3306
 });
 
@@ -19,5 +19,5 @@ connection.connect((err) => {
   }
 });
 
-// Xuất kết nối để dùng ở file khác
+
 module.exports = connection;

@@ -219,3 +219,60 @@
 .register-note a{ color: var(--primary-600); font-weight:600; text-decoration:none; }
 .register-note a:hover{ text-decoration:underline; }
 
+/* Container chính, cần 'position: relative' để định vị menu con */
+.user-menu-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Kiểu cho nút kích hoạt "Xin chào..." */
+.user-menu-trigger {
+    cursor: pointer; /* Biến con trỏ chuột thành hình bàn tay */
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Khoảng cách giữa tên và mũi tên */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Thay đổi màu nền nhẹ khi di chuột qua */
+.user-menu-trigger:hover {
+    background-color: #f0f0f0;
+}
+
+/* Kiểu cho mũi tên */
+.dropdown-arrow {
+    font-size: 0.7em; /* Cho mũi tên nhỏ lại */
+}
+
+/* Menu thả xuống (mặc định ẩn) */
+.dropdown-menu {
+    display: none; /* QUAN TRỌNG: Mặc định ẩn */
+    position: absolute;
+    right: 0; /* Căn lề phải */
+    top: 100%; /* Hiển thị ngay bên dưới nút kích hoạt */
+    background-color: white;
+    min-width: 180px; /* Độ rộng tối thiểu cho menu */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10; /* Luôn nằm trên cùng */
+    border-radius: 5px;
+    overflow: hidden; /* Đảm bảo các link bên trong cũng bo góc */
+}
+
+/* Các link <a> bên trong menu thả xuống */
+.dropdown-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block; /* Mỗi link chiếm 1 hàng */
+}
+
+/* Đổi màu nền khi di chuột qua từng mục menu */
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Lớp 'show' này sẽ được JavaScript thêm/xóa để ẩn/hiện menu */
+.dropdown-menu.show {
+    display: block; /* QUAN TRỌNG: Hiển thị menu */
+}

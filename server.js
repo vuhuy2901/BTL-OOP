@@ -9,7 +9,7 @@ app.use(express.json());
 
 
 const  db = require("./config/db.js") 
-// Test query đơn giản nhất
+
 db.query('SELECT 1', (err, results) => {
   if (err) {
     console.error('❌ Lỗi query:', err.message);

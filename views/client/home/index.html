@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Lowtech Store – Shop bán đồ thể thao số 1 Itis</title>
-   
+
     <link href="/client/css/home/index.css" rel="stylesheet" />
   </head>
   <body>
@@ -82,7 +82,7 @@
         </div>
       </nav>
     </header>
-  
+
     <section class="hero" id="heroSection" aria-label="Khuyến mãi nổi bật">
       <div class="banner" id="banner">
         <div class="slides">
@@ -295,7 +295,50 @@
       </div>
     </footer>
     <script src="client/js/home/index.js"></script>
-    <script src = "client/js/auth/auth.js"></script>
+    <script src="client/js/auth/auth.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const loginBtn = document.getElementById("loginBtn");
+        const username = sessionStorage.getItem("username");
+        const hoTen = sessionStorage.getItem("ho_ten");
+
+        if (username && hoTen) {
+          loginBtn.outerHTML = `
+        <div class="user-menu-container">
+
+            <div id="userMenuTrigger" class="user-menu-trigger">
+                <span>👤 Xin chào, <strong>${hoTen}</strong></span>
+                <span class="dropdown-arrow">▼</span>
+            </div>
+
+            <div id="userDropdownMenu" class="dropdown-menu">
+                <a href="/profile">Thông tin cá nhân</a>
+                <a href="/cart">Giỏ hàng</a>
+                <a href="#" id="logoutBtn">Đăng xuất</a>
+            </div>
+
+        </div>
+      `;
+
+          const menuTrigger = document.getElementById("userMenuTrigger");
+          const dropdownMenu = document.getElementById("userDropdownMenu");
+
+          if (menuTrigger && dropdownMenu) {
+            menuTrigger.addEventListener("click", (event) => {
+              event.stopPropagation();
+
+              dropdownMenu.classList.toggle("show");
+            });
+          }
+
+          document.addEventListener("click", (e) => {
+            if (e.target && e.target.id === "logoutBtn") {
+              sessionStorage.clear();
+              window.location.reload(); // reload lại trang về chế độ chưa đăng nhập
+            }
+          });
+        }
+      });
+    </script>
   </body>
 </html>
-
