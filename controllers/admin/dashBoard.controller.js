@@ -1,3 +1,5 @@
+
+const path = require("path"); 
 module.exports = (req,res) =>{
-    res.send("Trang chủ admin")
+    res.sendFile(path.join(__dirname, "..","..", "views","admin","dashboard","index.html"));
 }

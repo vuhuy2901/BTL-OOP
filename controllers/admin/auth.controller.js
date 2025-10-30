@@ -8,7 +8,7 @@ exports.handleLogin = (req, res) => {
     req.session.adminId = "admin";
     req.session.adminUsername = username;
     
-    return res.json({ success: true, message: "Đăng nhập thành công" });
+    return res.json({ success: true, message: "Đăng nhập chế độ admin thành công" });
   }
 
   return res.status(401).json({ success: false, message: "Sai tên hoặc mật khẩu" });
